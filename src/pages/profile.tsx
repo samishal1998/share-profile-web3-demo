@@ -6,7 +6,7 @@ import { configureChains, createClient, useAccount, useBalance, useContractRead,
 
 import { BigNumber, ethers } from 'ethers';
 import { useParams } from 'react-router-dom';
-import { Avatar, Box, List, ListItem, ListItemAvatar, ListItemText, Typography } from "@mui/material"
+import { Avatar, Box, CircularProgress, List, ListItem, ListItemAvatar, ListItemText, Typography } from "@mui/material"
 import accounts from '../contracts/Accounts.json'
 
 export function ProfilePage() {
@@ -40,22 +40,7 @@ export function ProfilePage() {
 
 
             <div>
-                {/* <p>
-                User Address: {(account.address)}
-            </p>
-            <p>
-
-    const { config } = usePrepareSendTransaction({
-        request: { to: '0x706a1415bc5ea0576B5a93bEe633F87E62CA759A', value: BigNumber.from('50000000000000000') },
-    })
-    // const { data, isLoading, isSuccess, sendTransaction } =
-    //     useSendTransaction(config)
-                User Balance: {(balance.data?.formatted)} ETH
-            </p> */}
-                {/* <button disabled={!sendTransaction} onClick={() => sendTransaction?.()}>
-                    Send Transaction
-                </button> */}
-                {/* {isLoading && <div>Check Wallet</div>} */}
+                {isLoading && <CircularProgress/>}
                 {isSuccess &&
 
                     <Box py={5} display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'stretch'} maxWidth={420} mx={'auto'} >
@@ -72,10 +57,8 @@ export function ProfilePage() {
 
                             <List sx={{ width: '100%', }}>
                                 {links.map((link: any) => {
-                                    // console.log({link})
                                     if (link['enabled'])
                                         return <LinkRow link={link} />
-
                                 })}
 
                             </List>
