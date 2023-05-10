@@ -1,7 +1,11 @@
 .App {
   text-align: center;
-}
 
+}
+body {
+  background-color: #282c34;
+  color: #fff;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +39,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+.user-table, .user-table td,  .user-table tr {
+
+  border: 2px solid #657eb0;
+  border-radius: .25rem;
+  padding: .2rem;
+
+}
+.user-table {
+  margin: 1rem auto;
+}
+.internal-table {
+  width: 100%;
+}
+.user-table .header {
+  font-weight: 600;
 }
