@@ -67,8 +67,10 @@ const chains = [mainnet, sepolia,
   gnosis,
   fantom]
 
+
+//Wallet Connect Project Key
 const projectId = '8c49b47e54cef09076b92c2bae46bc8a'
-// const projectId = 'cb266e8d5eeaf135df57170e892d618b'
+
 
 const { provider } = configureChains(chains, [w3mProvider({ projectId })])
 
@@ -102,7 +104,7 @@ function materialTheme(){
        shape:{
         borderRadius:16,
        },
-       
+
       },
       
   );
